@@ -1,0 +1,9 @@
+# Blackout code
+npm init
+
+npm install --save-dev typescript
+npm install --save-dev 
+npm install --save-dev ts-loader
+npm install --save-dev webpack
+
+node ./node_modules/webpack/bin/webpack.js -w
