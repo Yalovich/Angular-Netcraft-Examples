@@ -1,0 +1,110 @@
+@import "scss/reset";
+@import "scss/mixin";
+
+$black: #000;
+
+body
+{
+  background-color: #F4F4F4;
+}
+
+.root
+{
+  main
+  {
+    width: 70vw;
+    margin: 0 auto;
+
+    header
+    {
+      @include flexContainer;
+      @include flexJustifyContent(space-between);
+      @include flexAlignItems(center);
+
+      h1
+      {
+        @extend .flat-headline;
+        font-size: 2em;
+      }
+
+      img
+      {
+        width: 4em;
+        height: 4em;
+      }
+    }
+
+    section
+    {
+      .card-content
+      {
+        h2
+        {
+          @extend .flat-headline;
+          color: #000;
+          margin-bottom: 50px;
+
+          &.text-center
+          {
+            text-align: center;
+          }
+        }
+
+        input
+        {
+          color: $black;
+        }
+
+        .select-wrapper
+        {
+          margin-top: 1rem;
+
+          label
+          {
+            font-size: 1em;
+            display: block;
+            margin-bottom: 10px;
+          }
+
+          select
+          {
+            color: $black;
+          }
+        }
+
+        .buttons-wrapper
+        {
+          margin-top: 4rem;
+          text-align: center;
+        }
+
+        .menu
+        {
+          padding: 0;
+          margin: 0;
+
+          color: $black;
+
+          li.card
+          {
+            @include flexContainer;
+            @include flexJustifyContent(space-between);
+            @include flexAlignItems(center);
+            padding: 0.5rem 15px;
+            margin-bottom: 1rem;
+
+            h5
+            {
+              font-size: 1.2em;
+            }
+
+            span
+            {
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

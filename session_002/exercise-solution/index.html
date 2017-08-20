@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Apollo Souvlaki</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+        <link href="resources/css/apollo.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <div class="root">
+            <main>
+                <header>
+                    <h1>Apollo Souvlaki</h1>
+                    <img src="https://s3-us-west-2.amazonaws.com/svgporn.com/logos/typescript-icon.svg" />
+                </header>
+
+                <section class="card z-depth-3">
+                    <div class="card-content white-text row">
+                        <div class="col s6">
+                            <h2>Add new product</h2>
+
+                            <div class="input-field">
+                                <input id="name" type="text">
+                                <label for="name" class="active">Dish Name</label>
+                            </div>
+
+                            <div class="input-field">
+                                <input id="price" type="text">
+                                <label for="price" class="active">Dish Price</label>
+                            </div>
+
+                            <div class="select-wrapper">
+                                <label>Dish Type</label>
+                                <select class="browser-default" id="type">
+                                    <option value="" disabled selected>Product Type</option>
+                                    <option value="1">Appetizer</option>
+                                    <option value="2">Main Course</option>
+                                    <option value="3">Dessert</option>
+                                </select>
+                            </div>
+
+                            <div class="buttons-wrapper">
+                                <button class="waves-effect waves-light btn">Add Product</button>
+                            </div>
+
+                        </div><!-- /add new product -->
+
+                        <div class="col s6">
+                            <h2 class="text-center">Current Inventory</h2>
+
+                            <ul class="menu"></ul>
+
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+        <script type="text/javascript" src="resources/js/app.js"></script>
+    </body>
+</html>

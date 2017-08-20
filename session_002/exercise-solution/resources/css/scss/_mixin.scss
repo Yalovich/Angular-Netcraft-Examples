@@ -1,0 +1,20 @@
+@mixin flexContainer()
+{
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flexJustifyContent($how)
+{
+  -webkit-justify-content: $how;
+  -ms-flex-pack: $how;
+  justify-content: $how;
+}
+
+@mixin flexAlignItems($how)
+{
+  -webkit-align-items: $how;
+  -ms-flex-align: $how;
+  align-items: $how;
+}

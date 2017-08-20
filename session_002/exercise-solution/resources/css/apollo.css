@@ -1,0 +1,66 @@
+.flat-headline, .root main header h1, .root main section .card-content h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em; }
+
+body {
+  background-color: #F4F4F4; }
+
+.root main {
+  width: 70vw;
+  margin: 0 auto; }
+  .root main header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .root main header h1 {
+      font-size: 2em; }
+    .root main header img {
+      width: 4em;
+      height: 4em; }
+  .root main section .card-content h2 {
+    color: #000;
+    margin-bottom: 50px; }
+    .root main section .card-content h2.text-center {
+      text-align: center; }
+  .root main section .card-content input {
+    color: #000; }
+  .root main section .card-content .select-wrapper {
+    margin-top: 1rem; }
+    .root main section .card-content .select-wrapper label {
+      font-size: 1em;
+      display: block;
+      margin-bottom: 10px; }
+    .root main section .card-content .select-wrapper select {
+      color: #000; }
+  .root main section .card-content .buttons-wrapper {
+    margin-top: 4rem;
+    text-align: center; }
+  .root main section .card-content .menu {
+    padding: 0;
+    margin: 0;
+    color: #000; }
+    .root main section .card-content .menu li.card {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: space-between;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0.5rem 15px;
+      margin-bottom: 1rem; }
+      .root main section .card-content .menu li.card h5 {
+        font-size: 1.2em; }
+      .root main section .card-content .menu li.card span {
+        font-size: 1em; }
+
+/*# sourceMappingURL=apollo.css.map */
