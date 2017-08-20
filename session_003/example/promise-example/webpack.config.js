@@ -1,4 +1,5 @@
 var SRC_FOLDER = __dirname.concat("/src");
+var DIST_FOLDER = __dirname.concat("/dist");
 
 module.exports = {
  entry: {
@@ -18,6 +19,6 @@ module.exports = {
  },
  output: {
    filename: '[name].js',
-   path: __dirname.concat('/dist')
+   path: DIST_FOLDER
  }
 };
