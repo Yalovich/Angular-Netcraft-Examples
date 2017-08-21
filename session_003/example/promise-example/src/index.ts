@@ -17,15 +17,19 @@ class App
 
         api.getMenu().then((menu: ApiResponse)=> {
 
-            console.log(menu);
+            console.log(" ---> ", menu);
 
         }, (error: ApiError) => {
 
             // handler for error
 
+            console.log("Error: ", error);
+
         }).catch( error => {
 
             // handler for unexcpected error
+
+            console.log("Error: ", error);
 
         });
     }

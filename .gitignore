@@ -5,3 +5,5 @@ server/.idea
 server/node_modules
 session_003/example/angular-example/manual/node_modules
 session_002/exercise-solution/node_modules
+session_003/example/promise-example/.idea
+session_003/example/promise-example/node_modules
