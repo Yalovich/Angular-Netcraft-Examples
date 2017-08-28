@@ -1,0 +1,21 @@
+.card
+{
+  overflow: hidden;
+}
+
+figure
+{
+  margin: 0;
+}
+
+img.thumbnail
+{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+img.shadow
+{
+  box-shadow: 2px 2px 0px 10px rgba(0, 0, 0, 0.6);
+}
