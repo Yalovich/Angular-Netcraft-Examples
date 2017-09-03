@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UsesrService} from "../services/user.services";
 
 @Component({
   selector: 'top-header',
@@ -7,7 +8,20 @@ import { Component } from '@angular/core';
 })
 export class TopHeaderComponent {
 
+  userName: string = "";
 
+  constructor(private userService: UsesrService){}
 
+  ngOnInit()
+  {
+    this.userName = this.userService.name;
+  }
+
+  refreshUserName(event: any)
+  {
+    this.userName = this.userService.name;
+
+    console.log(this.userService.name)
+  }
 }
 

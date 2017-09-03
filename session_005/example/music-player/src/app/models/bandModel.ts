@@ -1,9 +1,9 @@
-/**
- * Created by Yalovich on 03/09/2017.
- */
+import ConcertModel from "./conecrtModel";
+
 export default class BandModel
 {
   videoUrl: string;
+  upComingCocnerts: [ConcertModel];
 
   constructor(public name: string, public image: string, public birthday: string, videoUrl?: string) {
 
@@ -19,5 +19,21 @@ export default class BandModel
   {
     this.videoUrl = url;
     return this.videoUrl;
+  }
+
+  /**
+   * add new concert to an artist
+   * @param concert
+   */
+  addConcert(concert: ConcertModel)
+  {
+    if(!this.upComingCocnerts)
+    {
+      this.upComingCocnerts = [concert];
+      return this;
+    }
+
+    this.upComingCocnerts.push(concert);
+    return this;
   }
 }

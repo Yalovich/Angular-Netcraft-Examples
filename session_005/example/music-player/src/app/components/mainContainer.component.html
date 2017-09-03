@@ -1,7 +1,24 @@
 <div class="left">
 
+  <band-card *ngFor="let band of bands | concert: bandsOnly" [band]="band" (onSelectToPlay)="onSelectToPlay($event)"></band-card>
 
 </div>
 <div class="right">
 
+  <iframe width="100%" height="315" [src]="videoSource" frameborder="0" allowfullscreen *ngIf="videoSource"></iframe>
+
+  <div>
+
+          <div class="input-field col s6">
+            <input placeholder="Placeholder" id="first_name" type="text" class="validate" [(ngModel)]="name" (keyup.enter)="saveName($event)">
+            <label for="first_name" class="active">First Name</label>
+          </div>
+
+          <div>
+            My First Name {{ name }}
+          </div>
+
+
+
+  </div>
 </div>
