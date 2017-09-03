@@ -45,4 +45,13 @@ export class AppComponent
     if(event.which == 13) this.onPlay(band);
   }
 
+  /**
+   * return default name in case user has no name
+   * @return {string}
+   */
+  getDefaultName(): string
+  {
+    return "Louis Armstrong";
+  }
+
 }
