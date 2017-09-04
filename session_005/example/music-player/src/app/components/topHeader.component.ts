@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import StorageService from "../services/storage.service";
 
 @Component({
   selector: 'top-header',
@@ -7,7 +8,15 @@ import { Component } from '@angular/core';
 })
 export class TopHeaderComponent {
 
+  constructor(private storage: StorageService)
+  {
+    setInterval(() => {
 
+      console.log(" --> ", this.storage.lastKey);
+
+    }, 1500)
+
+  }
 
 }
 

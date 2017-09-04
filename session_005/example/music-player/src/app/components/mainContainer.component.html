@@ -1,7 +1,34 @@
 <div class="left">
 
+  <band-card *ngFor="let band of bands; let bandIndex = index" [bandInput]="band" (playVideo)="onPlayVideoFromBandCardNow($event)" id="band-{{bandIndex}}"></band-card>
 
 </div>
 <div class="right">
+
+
+
+  <div class="container">
+
+    <div *ngIf="selectedBand" class="c">
+      <h1>{{selectedBand.name}}</h1>
+    </div>
+
+    <div class="input-field col s12">
+      <input placeholder="Placeholder" type="text" [(ngModel)]="user.name">
+    </div>
+
+    <div class="input-field col s12">
+      <input placeholder="Email" type="text" [(ngModel)]="user.email">
+    </div>
+
+    <div>
+      <button class="btn" (click)="saveUser($event)"></button>
+    </div>
+
+    <div>
+      <label>{{ user | json }}</label>
+    </div>
+
+  </div>
 
 </div>

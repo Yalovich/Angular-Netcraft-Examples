@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-title">
+    <figure [ngStyle]="{backgroundImage: 'url('.concat(bandInput.image).concat(')')}"></figure>
+    <div>{{ bandInput.name }}</div>
+  </div>
+  <div class="card-content">
+    <strong>Bass Player? {{ bandInput.isBassPlayer }}</strong>
+
+    <button class="btn" (click)="onPlayVideo($event)">
+      Play Video
+    </button>
+  </div>
+</div>

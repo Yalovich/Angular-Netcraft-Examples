@@ -1,0 +1,28 @@
+:host
+{
+  color: #000;
+}
+
+figure
+{
+  background-size: cover;
+  background-position: center top;
+  margin: 0;
+  padding: 0;
+  height: 20vh;
+}
+
+.card-title
+{
+  position: relative;
+}
+
+.card-title>div
+{
+  position: absolute;
+  bottom: 10px;
+  left:  10px;
+  font-size: 0.7em;
+  background-color: white;
+
+}
