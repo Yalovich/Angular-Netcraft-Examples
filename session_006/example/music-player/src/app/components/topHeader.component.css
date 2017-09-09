@@ -1,0 +1,41 @@
+:host
+{
+  background-color: rgba(50, 55, 63, 0.63);
+  display: block;
+  max-height: 70px;
+  box-shadow: 1px 0 2px 0px rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
+header
+{
+  display: flex;
+  align-items: center;
+}
+
+figure
+{
+  margin: 0;
+  padding: 0;
+  height: 70px;
+}
+
+figure img
+{
+  height: 80%;
+  margin: 7px 0 0 1vw;
+}
+
+h1
+{
+  font-size: 1.9em;
+  font-weight: 100;
+  margin: 0 0 0 1.5vw;
+}
+
+
+.profile
+{
+  position: absolute;
+  right: 10px;
+}
