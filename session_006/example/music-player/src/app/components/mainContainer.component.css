@@ -1,0 +1,51 @@
+:host
+{
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+.left
+{
+  flex: 1 0 0;
+  background-color: rgba(255, 255, 255 , 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  width: 25vw;
+  max-width: 420px;
+  overflow: scroll;
+}
+
+.right
+{
+  flex: 1 0 0;
+  padding: 15px;
+}
+
+
+.noBands
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-band h4
+{
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 1em;
+  color: rgba(255, 255, 255, 0.5);
+  user-select: none;
+  cursor: default;
+}
+
+.form
+{
+  padding-top: 30px;
+}
+
+.form label
+{
+  left: 0;
+}

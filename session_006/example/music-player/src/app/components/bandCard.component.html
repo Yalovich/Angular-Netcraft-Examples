@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-head">
+        <figure [ngStyle]="{backgroundImage: 'url('.concat(band.image).concat(')')}"></figure>
+        <h5>{{band.name}}</h5>
+    </div>
+    <div class="card-content">
+
+        <button class="btn" (click)="selectBand($event)">Select Band</button>
+    </div>
+</div>

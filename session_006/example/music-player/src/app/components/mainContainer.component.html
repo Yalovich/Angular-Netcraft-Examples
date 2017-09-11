@@ -1,0 +1,29 @@
+<div class="left">
+
+  <band-card *ngFor="let band of bands | concert: bandsOnly" [band]="band" (onSelectToPlay)="onSelectToPlay($event)"></band-card>
+
+</div>
+<div class="right" [ngClass]="{noBands: selected == null}">
+
+  <section *ngIf="selected != null">
+
+    <iframe width="100%" height="315" [src]="videoSource" frameborder="0" allowfullscreen *ngIf="videoSource"></iframe>
+
+    <div class="form">
+        <div class="input-field col s6">
+            <input placeholder="Your name" id="first_name" type="text" class="validate" [(ngModel)]="name" (keyup.enter)="saveName($event)">
+            <label for="first_name" class="active">First Name</label>
+        </div>
+
+        <div>
+          <h5>Details Summary:</h5>
+          <span>{{name}}</span>
+        </div>
+    </div>
+
+  </section>
+
+  <section class="select-band" *ngIf="selected == null">
+      <h4>Select Band</h4>
+  </section>
+</div>
