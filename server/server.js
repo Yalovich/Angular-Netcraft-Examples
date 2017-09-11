@@ -10,19 +10,19 @@ app.use(cors());
 const serverApp = require('./src/app');
 
 app.get('/', function (req, res) {
-    res.send('Apollo Souvlaki')
+    res.send('Groove Machine API')
 })
 
-app.get('/menu', function(req, res) {
+app.get('/bands', function(req, res) {
 
-    serverApp.getMenu().then(function(menu) {
+    serverApp.getBands().then(function(menu) {
         res.header("Content-Type", "application/json");
         res.send(JSON.stringify(menu));
     });
 });
 
 app.listen(3000, function () {
-    console.log('Apollo Server is running on port 3000!')
+    console.log('Bands Machine Server is running on port 3000!')
 })
 
 

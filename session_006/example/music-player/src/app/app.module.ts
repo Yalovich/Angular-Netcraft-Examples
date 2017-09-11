@@ -9,6 +9,7 @@ import ConcertPipe from "./pipes/concert.pipe";
 import {BandCardComponent} from "./components/bandCard.component";
 import {FormsModule} from "@angular/forms";
 import {UsesrService} from "./services/user.services";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {UsesrService} from "./services/user.services";
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [UsesrService],
   bootstrap: [AppComponent]

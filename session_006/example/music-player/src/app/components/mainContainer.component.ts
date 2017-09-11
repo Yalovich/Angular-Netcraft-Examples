@@ -4,11 +4,15 @@ import BandModel from "../models/bandModel";
 import ConcertModel from "../models/conecrtModel";
 import {DomSanitizer, SafeUrl} from "@angular/platform-browser";
 import {UsesrService} from "../services/user.services";
+import ApiService from "../services/api.service";
 
 @Component({
   selector: 'main-container',
   templateUrl: './mainContainer.component.html',
-  styleUrls: ['./mainContainer.component.css']
+  styleUrls: ['./mainContainer.component.css'],
+  providers: [
+    ApiService
+  ]
 })
 
 export class MainContainerComponent {
@@ -21,7 +25,7 @@ export class MainContainerComponent {
 
   name: string;
 
-  constructor(private sanitizer: DomSanitizer, private userService: UsesrService)
+  constructor(private sanitizer: DomSanitizer, private userService: UsesrService, private api: ApiService)
   {
     this.bands = [
       new BandModel("Anderson .Paak", "http://www.okayplayer.com/wp-content/uploads/2016/06/25_AndersonPaak_02.jpg", "1986-02-08"),
@@ -38,13 +42,18 @@ export class MainContainerComponent {
     this.videoSource = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/_7T7XnkJP3M");
   }
 
+  ngOnInit()
+  {
+    this.api.getBands()
+  }
+
   /**
    *
    * @param band
    */
   onSelectToPlay(band: BandModel)
   {
-    this.videoSource = this.sanitizer.bypassSecurityTrustResourceUrl(band.videoUrl);
+    this.videoSource = this.sanitizer.bypassSecurityTrustResourceUrl(band.video);
     this.selected = band;
   }
 
@@ -59,6 +68,11 @@ export class MainContainerComponent {
     console.log("Save: ", this.name);
 
     this.userService.name = this.name;
+  }
+
+  saveUser(event: any)
+  {
+    this.api.saveUserDetails(this.userService.name);
   }
 }
 

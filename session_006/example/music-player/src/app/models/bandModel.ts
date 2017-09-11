@@ -2,7 +2,7 @@ import ConcertModel from "./conecrtModel";
 
 export default class BandModel
 {
-  videoUrl: string;
+  video: string;
   upComingCocnerts: [ConcertModel];
 
   constructor(public name: string, public image: string, public birthday: string, videoUrl?: string) {
@@ -17,8 +17,8 @@ export default class BandModel
    */
   addVideoUrl(url: string)
   {
-    this.videoUrl = url;
-    return this.videoUrl;
+    this.video = url;
+    return this.video;
   }
 
   /**
