@@ -1,0 +1,35 @@
+:host
+{
+  color: #000;
+}
+
+.card-head
+{
+  position: relative;
+}
+
+figure
+{
+  padding-bottom: 55%;
+  margin: 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+h5
+{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 10px 0 0 0 rgba(255, 255, 255, 0.8);
+}
+h5:before
+{
+  content: " ";
+  display: inline-block;
+  line-height: 1em;
+  width: 10px;
+  box-shadow: -10px 0 0 0 rgba(255, 255, 255, 0.8);
+}

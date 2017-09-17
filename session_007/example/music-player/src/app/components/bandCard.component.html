@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-head">
+        <figure [ngStyle]="{backgroundImage: 'url('.concat(band.image).concat(')')}"></figure>
+        <h5>{{band.name}}</h5>
+    </div>
+    <div class="card-content">
+
+        <button class="btn" (click)="playVideo($event)">Play Video</button>
+        <a [routerLink]="['band', band.id]">More info</a>
+    </div>
+</div>
