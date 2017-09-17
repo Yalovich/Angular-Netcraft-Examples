@@ -1,5 +1,7 @@
 <div class="left">
 
+  <button class="btn" (click)="recall($event)">Recall</button>
+
   <band-card *ngFor="let band of bands | concert: bandsOnly" [band]="band" (onSelectToPlay)="onSelectToPlay($event)"></band-card>
 
 </div>
@@ -18,6 +20,10 @@
         <div>
           <h5>Details Summary:</h5>
           <span>{{name}}</span>
+
+          <button class="btn" (click)="saveUser($event)">
+            Save Details
+          </button>
         </div>
     </div>
 

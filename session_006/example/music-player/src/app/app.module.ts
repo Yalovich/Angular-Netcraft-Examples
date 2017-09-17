@@ -9,6 +9,9 @@ import ConcertPipe from "./pipes/concert.pipe";
 import {BandCardComponent} from "./components/bandCard.component";
 import {FormsModule} from "@angular/forms";
 import {UsesrService} from "./services/user.services";
+import LazyLoadDirective from "./directives/lazyLoad.directive";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import BandsService from "./services/bands.service";
 
 @NgModule({
   declarations: [
@@ -18,13 +21,19 @@ import {UsesrService} from "./services/user.services";
     BandCardComponent,
 
     addTaxPipe,
-    ConcertPipe
+    ConcertPipe,
+
+    LazyLoadDirective
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [UsesrService],
+  providers: [
+    UsesrService,
+    BandsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

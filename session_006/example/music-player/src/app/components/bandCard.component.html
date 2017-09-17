@@ -1,10 +1,11 @@
 <div class="card">
     <div class="card-head">
-        <figure [ngStyle]="{backgroundImage: 'url('.concat(band.image).concat(')')}"></figure>
-        <h5>{{band.name}}</h5>
+        <figure [lazyLoad]="band.image" [ngStyle]="{backgroundImage: 'url(https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif)'}"></figure>
+        <h5>
+          {{band.name}}
+        </h5>
     </div>
     <div class="card-content">
-
         <button class="btn" (click)="selectBand($event)">Select Band</button>
     </div>
 </div>
